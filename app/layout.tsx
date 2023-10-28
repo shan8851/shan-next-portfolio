@@ -4,6 +4,7 @@ import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Analytics } from "@/components/analytics"
 import { ModeToggle } from "@/components/mode-toggle"
+import { Footer } from "@/components/footer"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -23,17 +24,23 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 ${inter.className}`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="max-w-2xl mx-auto py-10 px-4">
+          <div className="flex flex-col min-h-screen max-w-2xl mx-auto pt-10 pb-2 px-4">
             <header>
               <div className="flex items-center justify-between">
-                <ModeToggle />
-                <nav className="ml-auto text-sm font-medium space-x-6">
-                  <Link href="/">Home</Link>
-                  <Link href="/blog">Blog</Link>
+                <nav className="text-sm font-medium space-x-6">
+                  <Link className="hover:underline" href="/">home</Link>
+                  <Link className="hover:underline" href="/now">/now</Link>
+                  <Link className="hover:underline" href="/blog">blog</Link>
                 </nav>
+                <ModeToggle />
               </div>
             </header>
-            <main>{children}</main>
+            <main className="flex-grow">
+              {children}
+            </main>
+            <footer>
+              <Footer />
+            </footer>
           </div>
           <Analytics />
         </ThemeProvider>
@@ -41,3 +48,4 @@ export default function RootLayout({ children }: RootLayoutProps) {
     </html>
   )
 }
+
