@@ -1,30 +1,31 @@
-// projects.tsx
 import { projectsData } from '@/app/data/projects';
 import React from 'react';
 
 export interface ProjectProps {
   title: string;
   description: string;
-  tags: string[];
+  tags?: string[];
   url: string;
 }
 
 const Project: React.FC<ProjectProps> = ({ title, description, tags, url }) => {
   return (
     <div className="flex flex-col gap-2">
-      <div className="flex gap-4">
-        <a href={url} className="text-xl font-bold underline">
+      <div className="flex gap-4 items-center">
+        <a href={url} className="text-md font-bold underline">
         {title}
         </a>
-        <div className='flex gap-1'>
+        {tags && (
+          <div className='flex gap-1'>
           {tags.map((tag, index) => (
-          <span key={index} className="mr-2 mb-2">
+          <span key={index} className="text-xs bg-slate-700 py-0.5 px-1 rounded-md">
             {tag}
           </span>
         ))}
         </div>
+        )}
       </div>
-      <p className="mt-2 mb-4">
+      <p className="mt-2 mb-4 text-sm">
         {description}
       </p>
     </div>
