@@ -25,7 +25,7 @@ export const RecentPosts: React.FC = () => {
           {post.description && <p className="m-0 text-sm">{post.description}</p>}
         </article>
       )})}
-      <Link className="font-light flex gap-1 text-slate-400 items-center my-4 hover:text-white" href="/blog">
+      <Link className="font-light flex gap-1 text-slate-600 hover:text-black items-center my-4 dark:text-slate-300 dark:hover:text-white" href="/blog">
         all posts
         <BiRightArrowAlt />
       </Link>

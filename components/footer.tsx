@@ -9,14 +9,14 @@ export const Footer = () => {
         <div className="flex bg-slate-700 mb-4 h-[1px]" />
         <div className="flex justify-between items-center py-2">
         <div>
-          <a href="https://opensource.org/license/mit/" className="underline text-zinc-400 hover:text-zinc-300">MIT</a> - 2023 © shan8851
+          <a href="https://opensource.org/license/mit/" className="underline ">MIT</a> - 2023 © shan8851
         </div>
         <div className="flex gap-2">
-          <a target='_blank'  className='hover:text-white' href={LINKEDIN_URL}><RiLinkedinBoxFill /></a>
-          <a target='_blank' className='hover:text-white' href={EMAIL_URL}><HiOutlineMail /></a>
-          <a target='_blank' className='hover:text-white' href={TWITTER_URL}><RiTwitterXFill /></a>
-          <a target='_blank' className='hover:text-white' href={GITHUB_URL}><SiGithub /></a>
-          <a target='_blank' className='hover:text-white' href={BUY_COFFEE_URL}><SiBuymeacoffee /></a>
+          <a target='_blank'  className='text-slate-600 dark:text-slate-400 hover:text-black hover:dark:text-white' href={LINKEDIN_URL}><RiLinkedinBoxFill /></a>
+          <a target='_blank' className='text-slate-600 dark:text-slate-400 hover:text-black hover:dark:text-white' href={EMAIL_URL}><HiOutlineMail /></a>
+          <a target='_blank' className='text-slate-600 dark:text-slate-400 hover:text-black hover:dark:text-white' href={TWITTER_URL}><RiTwitterXFill /></a>
+          <a target='_blank' className='text-slate-600 dark:text-slate-400 hover:text-black hover:dark:text-white' href={GITHUB_URL}><SiGithub /></a>
+          <a target='_blank' className='text-slate-600 dark:text-slate-400 hover:text-black hover:dark:text-white' href={BUY_COFFEE_URL}><SiBuymeacoffee /></a>
         </div>
       </div>
       </div>

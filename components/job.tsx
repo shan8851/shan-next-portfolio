@@ -19,7 +19,7 @@ export const Job = ({ jobDetails }: JobProps) => {
         <p className="m-0 text-slate-400 font-light">{date}</p>
       </div>
       <div className="flex justify-between items-center">
-        <p className="m-0 text-white">{title}</p>
+        <p className="m-0">{title}</p>
         <p className="m-0 text-slate-400 font-light">{location}</p>
       </div>
       <ul>

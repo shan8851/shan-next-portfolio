@@ -18,7 +18,7 @@ const Project: React.FC<ProjectProps> = ({ title, description, tags, url }) => {
         {tags && (
           <div className='flex gap-1'>
           {tags.map((tag, index) => (
-          <span key={index} className="text-xs bg-slate-700 py-0.5 px-1 rounded-md">
+          <span key={index} className="text-xs bg-slate-300 dark:bg-slate-700 py-0.5 px-1 rounded-md">
             {tag}
           </span>
         ))}
