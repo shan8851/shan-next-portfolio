@@ -1,6 +1,7 @@
 import { RiTwitterXFill, RiLinkedinBoxFill } from 'react-icons/ri';
 import { SiGithub, SiBuymeacoffee } from 'react-icons/si';
 import { HiOutlineMail } from 'react-icons/hi';
+import { BUY_COFFEE_URL, EMAIL_URL, GITHUB_URL, LINKEDIN_URL, TWITTER_URL } from '@/app/constants';
 
 export const Footer = () => {
   return (
@@ -11,11 +12,11 @@ export const Footer = () => {
           <a href="https://opensource.org/license/mit/" className="underline text-zinc-400 hover:text-zinc-300">MIT</a> - 2023 © shan8851
         </div>
         <div className="flex gap-2">
-          <RiLinkedinBoxFill />
-          <HiOutlineMail />
-          <RiTwitterXFill />
-          <SiGithub />
-          <SiBuymeacoffee />
+          <a target='_blank'  className='hover:text-white' href={LINKEDIN_URL}><RiLinkedinBoxFill /></a>
+          <a target='_blank' className='hover:text-white' href={EMAIL_URL}><HiOutlineMail /></a>
+          <a target='_blank' className='hover:text-white' href={TWITTER_URL}><RiTwitterXFill /></a>
+          <a target='_blank' className='hover:text-white' href={GITHUB_URL}><SiGithub /></a>
+          <a target='_blank' className='hover:text-white' href={BUY_COFFEE_URL}><SiBuymeacoffee /></a>
         </div>
       </div>
       </div>

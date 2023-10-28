@@ -1,4 +1,5 @@
 import { Header } from "@/components/header";
+import { Mentoring } from "@/components/mentoring";
 import { ProjectsPage } from "@/components/projects";
 import { RecentPosts } from "@/components/recentBlogs";
 
@@ -8,6 +9,7 @@ export default function Home() {
       <Header />
       <ProjectsPage />
       <RecentPosts />
+      <Mentoring />
     </div>
   )
 }
