@@ -11,13 +11,13 @@ export default function BlogIndex() {
       const date = dayjs(post.date).format("MMMM DD, YYYY")
       return (
         <article key={post._id}>
-          <div className="flex justify-between">
-            <Link href={post.slug}>
-              <h4>{post.title}</h4>
+          <div className="flex justify-between items-center">
+            <Link href={post.slug} className="flex-grow">
+              <h4 className="m-0">{post.title}</h4>
             </Link>
-            <p className="text-sm font-light">{date}</p>
+            <p className="text-sm font-light whitespace-nowrap m-0">{date}</p>
           </div>
-          {post.description && <p className="m-0">{post.description}</p>}
+          {post.description && <p className="text-sm">{post.description}</p>}
         </article>
       )})}
     </div>
