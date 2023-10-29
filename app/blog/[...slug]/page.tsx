@@ -3,6 +3,8 @@ import { allPosts } from "contentlayer/generated"
 
 import { Metadata } from "next"
 import { Mdx } from "@/components/mdx-components"
+import Link from "next/link"
+import { BiLeftArrowAlt } from "react-icons/bi"
 
 interface PostProps {
   params: {
@@ -51,6 +53,10 @@ export default async function BlogPage({ params }: PostProps) {
 
   return (
     <article className="py-6 prose dark:prose-invert">
+      <Link className="font-light flex gap-1 text-slate-600 hover:text-black items-center my-4 dark:text-slate-300 dark:hover:text-white" href="/blog">
+        <BiLeftArrowAlt />
+        go back
+      </Link>
       <h1 className="mb-2">{post.title}</h1>
       {post.description && (
         <p className="text-xl mt-0 text-slate-700 dark:text-slate-200">
@@ -59,6 +65,10 @@ export default async function BlogPage({ params }: PostProps) {
       )}
       <hr className="my-4" />
       <Mdx code={post.body.code} />
+      <Link className="font-light flex gap-1 text-slate-600 hover:text-black items-center my-4 dark:text-slate-300 dark:hover:text-white" href="/blog">
+        <BiLeftArrowAlt />
+        go back
+      </Link>
     </article>
   )
 }
