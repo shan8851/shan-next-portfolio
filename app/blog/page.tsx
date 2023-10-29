@@ -3,11 +3,14 @@ import dayjs from "dayjs"
 import Link from "next/link"
 
 export default function BlogIndex() {
-
+  const postsByDate = allPosts.sort((a, b) => {
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  }
+  )
   return (
     <div className="prose dark:prose-invert">
       <h3 className="mt-12">Blog</h3>
-      {allPosts.map((post) => {
+      {postsByDate.map((post) => {
       const date = dayjs(post.date).format("MMMM DD, YYYY")
       return (
         <article key={post._id}>
