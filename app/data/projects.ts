@@ -8,6 +8,12 @@ export const projectsData: ProjectProps[] = [
     url: "https://www.reactifysvg.xyz/",
   },
     {
+    title: "CryptoCoffee",
+    description: "Inspired by the 'Buy me a coffee' model, CryptoCoffee allows you to send a small amount of Eth to me as a tip. Built with NextJS and Solidity.",
+    tags: ["NextJS", "Solidity", "wagmi"],
+    url: "https://cryptocoffee.vercel.app/",
+  },
+    {
     title: "MAC-Insurance",
     description: "Insurance protocol to protect from ERC20 token from price loss. Built as part of small team for the Ethglobal hackathon. Mac Insurance project took first place for 'best use' and second place for the 'best app' categories.",
     tags: ["NextJS", "TheGraph", "Solidity"],
