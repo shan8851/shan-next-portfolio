@@ -2,6 +2,12 @@ import { ProjectProps } from "@/components/projects";
 
 export const projectsData: ProjectProps[] = [
   {
+    title: 'hooked-on-react',
+    description: 'A collection of handy React hooks designed to accelerate development and enrich the user experience with less code and more functionality.',
+    tags: ['React', 'Typescript', 'Hooks'],
+    url: 'https://hooked-on-react.xyz/',
+  },
+  {
     title: "ReactifySVG",
     description: "Turn SVGs into React Components. Created with the T3 stack and a mysql database. Powered by SVGR. You can simply paste in any SVG and transform into a React component you can use in your projects. Updates coming such as live preveiw, customisation and more.",
     tags: ["T3", "NextJS", "SVGR"],
