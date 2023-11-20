@@ -38,7 +38,7 @@ export const ProjectsPage: React.FC = () => {
   return (
     <div className="flex flex-col gap-3">
       <h3>Projects</h3>
-      <p>I&apos;m pretty much always tinkering with something, usually it is my gatewat to learning new tech, all my projects are generally great learning experience, but naturally some are more complete than others. Below are a few of my favorites.</p>
+      <p>I&apos;m pretty much always tinkering with something, usually it is my gateway to learning new tech, all my projects are generally great learning experience, but naturally some are more complete than others. Below are a few of my favorites.</p>
       <div>
         {projectsData.map((project, index) => (
           <Project
