@@ -52,14 +52,14 @@ export default async function BlogPage({ params }: PostProps) {
   }
 
   return (
-    <article className="py-6 prose dark:prose-invert">
+    <article className="py-6 prose dark:prose-invert text-lg">
       <Link className="font-light flex gap-1 text-slate-600 hover:text-black items-center my-4 dark:text-slate-300 dark:hover:text-white" href="/blog">
         <BiLeftArrowAlt />
         go back
       </Link>
       <h1 className="mb-2">{post.title}</h1>
       {post.description && (
-        <p className="text-xl mt-0 text-slate-700 dark:text-slate-200">
+        <p className="text-2xl mt-0 text-slate-700 dark:text-slate-200">
           {post.description}
         </p>
       )}

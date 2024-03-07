@@ -26,7 +26,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <header>
               <div className="flex items-center gap-6">
                 <ModeToggle />
-                <nav className="text-sm font-medium space-x-6">
+                <nav className="text-md font-medium space-x-6">
                   <Link className="hover:underline" href="/">home</Link>
                   <Link className="hover:underline" href="/now">/now</Link>
                   <Link className="hover:underline" href="/cv">cv</Link>

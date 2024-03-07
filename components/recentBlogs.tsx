@@ -9,8 +9,8 @@ export const RecentPosts: React.FC = () => {
   }).slice(0, 4 || allPosts.length);
   return (
     <div className="flex flex-col gap-3">
-      <h3>Recent posts</h3>
-      <p>Writing is something that I have always enjoyed. I have kept numerous blogs in the past documenting things from everyday life to my journey in development. Mostly now my writing focusses on my general musings around the tech space and helping people land their first role in the industry.</p>
+      <h2>Recent posts</h2>
+      <p className="text-lg">Writing is something that I have always enjoyed. I have kept numerous blogs in the past documenting things from everyday life to my journey in development. Mostly now my writing focusses on my general musings around the tech space and helping people land their first role in the industry.</p>
       <div>
         {allPosts.map((post) => {
       const date = dayjs(post.date).format("MMMM DD, YYYY")
@@ -18,13 +18,13 @@ export const RecentPosts: React.FC = () => {
         <article className="mb-6"  key={post._id}>
           <div className="flex justify-between items-center">
             <Link href={post.slug} className="flex-grow">
-              <h4 className="m-0">{post.title}</h4>
+              <h3 className="m-0">{post.title}</h3>
             </Link>
             <p className="text-sm font-light whitespace-nowrap m-0">{date}</p>
           </div>
-          {post.description && <p className="text-sm">{post.description}</p>}
+          {post.description && <p className="text-lg">{post.description}</p>}
           <div className="flex gap-1">
-           {post.tags?.split(',').map(tag => <p className="text-xs bg-slate-300 dark:bg-slate-700 py-0.5 px-1 rounded-md m-0" key={tag.trim()}>{tag.trim()}</p>)}
+           {post.tags?.split(',').map(tag => <p className="text-sm bg-slate-300 dark:bg-slate-700 py-0.5 px-1 rounded-md m-0" key={tag.trim()}>{tag.trim()}</p>)}
            </div>
         </article>
       )})}
