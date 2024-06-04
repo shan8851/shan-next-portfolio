@@ -13,7 +13,7 @@ interface JobProps {
 export const Job = ({ jobDetails }: JobProps) => {
   const {company, title, date, location, description} = jobDetails
   return (
-    <div className="mb-8">
+    <div className="mb-4">
       <div className="flex justify-between item-center">
         <h4 className="m-0">{company}</h4>
         <p className="m-0 text-slate-400 font-light">{date}</p>

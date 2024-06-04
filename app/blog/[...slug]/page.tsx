@@ -52,7 +52,7 @@ export default async function BlogPage({ params }: PostProps) {
   }
 
   return (
-    <article className="py-6 prose dark:prose-invert text-lg">
+    <article className="py-2 prose dark:prose-invert text-lg">
       <Link className="font-light flex gap-1 text-slate-600 hover:text-black items-center my-4 dark:text-slate-300 dark:hover:text-white" href="/blog">
         <BiLeftArrowAlt />
         go back

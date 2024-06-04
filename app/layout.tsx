@@ -22,11 +22,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
     <body className={`antialiased min-h-screen bg-[var(--tw-prose-pre-bg)] dark:[var(--tw-prose-pre-bg)]  ${inter.className}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="flex flex-col min-h-screen max-w-3xl p-10">
+          <div className="flex flex-col min-h-screen max-w-3xl p-3">
             <header>
               <div className="flex items-center gap-6">
                 <ModeToggle />
-                <nav className="text-md font-medium space-x-6">
+                <nav className="text-sm font-medium space-x-6">
                   <Link className="hover:underline" href="/">home</Link>
                   <Link className="hover:underline" href="/now">/now</Link>
                   <Link className="hover:underline" href="/cv">cv</Link>

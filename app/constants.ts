@@ -5,3 +5,4 @@ export const EMAIL_URL = "mailto:shan@88dev.xyz"
 export const BUY_COFFEE_URL = "https://www.buymeacoffee.com/asamshan";
 export const CODING_COACH_URL = "https://mentors.codingcoach.io/u/5dcbc03f7686794a6c4e2d95?name=Asam+Shan";
 export const THE_MENTORING_CLUB_URL = "https://www.mentoring-club.com/the-mentors/asam-shan";
+export const BOOK_A_CALL_URL = 'https://cal.com/shan8851/30min'

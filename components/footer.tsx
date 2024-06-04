@@ -11,7 +11,7 @@ export const Footer = () => {
         <div>
           <a href="https://opensource.org/license/mit/" className="underline ">MIT</a> - 2023 © shan8851
         </div>
-        <div className="flex gap-2 text-xl">
+        <div className="flex gap-2 text-lg">
           <a target='_blank'  className='text-slate-600 dark:text-slate-400 hover:text-black hover:dark:text-white' href={LINKEDIN_URL}><RiLinkedinBoxFill /></a>
           <a target='_blank' className='text-slate-600 dark:text-slate-400 hover:text-black hover:dark:text-white' href={EMAIL_URL}><HiOutlineMail /></a>
           <a target='_blank' className='text-slate-600 dark:text-slate-400 hover:text-black hover:dark:text-white' href={TWITTER_URL}><RiTwitterXFill /></a>

@@ -6,23 +6,23 @@ import { BiRightArrowAlt } from "react-icons/bi";
 export const RecentPosts: React.FC = () => {
     const sortedAndLimitedPosts = allPosts.sort((a, b) => {
     return new Date(b.date).getTime() - new Date(a.date).getTime();
-  }).slice(0, 4 || allPosts.length);
+  }).slice(0, 3 || allPosts.length);
   return (
     <div className="flex flex-col gap-3">
-      <h2>Recent posts</h2>
-      <p className="text-lg">Writing is something that I have always enjoyed. I have kept numerous blogs in the past documenting things from everyday life to my journey in development. Mostly now my writing focusses on my general musings around the tech space and helping people land their first role in the industry.</p>
+      <h3>Recent posts</h3>
+      <p className="text-md">Writing is something that I have always enjoyed. I have kept numerous blogs in the past documenting things from everyday life to my journey in development. Mostly now my writing focusses on my general musings around the tech space and helping people land their first role in the industry.</p>
       <div>
-        {allPosts.map((post) => {
+        {sortedAndLimitedPosts.map((post) => {
       const date = dayjs(post.date).format("MMMM DD, YYYY")
       return (
         <article className="mb-6"  key={post._id}>
           <div className="flex justify-between items-center">
             <Link href={post.slug} className="flex-grow">
-              <h3 className="m-0">{post.title}</h3>
+              <h4 className="m-0">{post.title}</h4>
             </Link>
             <p className="text-sm font-light whitespace-nowrap m-0">{date}</p>
           </div>
-          {post.description && <p className="text-lg">{post.description}</p>}
+          {post.description && <p className="text-md">{post.description}</p>}
           <div className="flex gap-1">
            {post.tags?.split(',').map(tag => <p className="text-sm bg-slate-300 dark:bg-slate-700 py-0.5 px-1 rounded-md m-0" key={tag.trim()}>{tag.trim()}</p>)}
            </div>
