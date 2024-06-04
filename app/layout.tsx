@@ -1,12 +1,10 @@
 import Link from "next/link"
 import "./globals.css"
-import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Analytics } from "@/components/analytics"
 import { ModeToggle } from "@/components/mode-toggle"
 import { Footer } from "@/components/footer"
 
-const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
   title: "Shan8851",
@@ -20,7 +18,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-    <body className={`antialiased min-h-screen bg-[var(--tw-prose-pre-bg)] dark:[var(--tw-prose-pre-bg)]  ${inter.className}`}>
+    <body className={`antialiased min-h-screen bg-[var(--tw-prose-pre-bg)] dark:[var(--tw-prose-pre-bg)]  font-mono`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="flex flex-col min-h-screen max-w-3xl p-3">
             <header>
