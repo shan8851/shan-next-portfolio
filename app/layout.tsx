@@ -28,7 +28,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                   <Link className="hover:text-pink-400 underline" href="/">home</Link>
                   <Link className="hover:text-pink-400 underline" href="/now">/now</Link>
                   <Link className="hover:text-pink-400 underline" href="/cv">cv</Link>
-                  <Link className="hover:text-pink-400 underline" href="/blog">blog</Link>
+                  <Link className="hover:text-pink-400 underline" href="/thoughts">thoughts</Link>
                 </nav>
               </div>
               <div className="flex-shrink-0 pl-4">

@@ -2,14 +2,14 @@ import { allPosts } from "@/.contentlayer/generated"
 import dayjs from "dayjs"
 import Link from "next/link"
 
-export default function BlogIndex() {
+export default function ThoughtsIndex() {
   const postsByDate = allPosts.sort((a, b) => {
     return new Date(b.date).getTime() - new Date(a.date).getTime();
   }
   )
   return (
     <div className="prose dark:prose-invert p-4">
-      <h2 className="m-0 mb-4">Blog</h2>
+      <h2 className="m-0 mb-4">Thoughts</h2>
       {postsByDate.map((post) => {
       const date = dayjs(post.date).format("MMMM DD, YYYY")
       return (

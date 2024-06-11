@@ -13,5 +13,5 @@ build:
 clean:
 	rm -rf node_modules
 
-blog:
+thoughts:
 	npx contentlayer build

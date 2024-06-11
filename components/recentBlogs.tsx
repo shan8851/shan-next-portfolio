@@ -40,7 +40,7 @@ export const RecentPosts: React.FC = () => {
         })}
         <Link
           className="font-light flex gap-1 text-pink-400 hover:text-pink-500 items-center my-4 w-fit"
-          href="/blog"
+          href="/thoughts"
         >
           all posts
           <BiRightArrowAlt />

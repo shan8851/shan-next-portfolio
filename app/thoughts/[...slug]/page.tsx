@@ -44,7 +44,7 @@ export async function generateStaticParams(): Promise<PostProps["params"][]> {
   }))
 }
 
-export default async function BlogPage({ params }: PostProps) {
+export default async function ThoughtPage({ params }: PostProps) {
   const post = await getPostFromParams(params)
 
   if (!post) {
@@ -53,7 +53,7 @@ export default async function BlogPage({ params }: PostProps) {
 
   return (
     <article className="p-4 prose dark:prose-invert text-lg">
-      <Link className="font-light flex gap-1 items-center text-pink-400 hover:text-pink-500 decoration-transparent w-fit" href="/blog">
+      <Link className="font-light flex gap-1 items-center text-pink-400 hover:text-pink-500 decoration-transparent w-fit" href="/thoughts">
         <BiLeftArrowAlt />
         go back
       </Link>
@@ -64,7 +64,7 @@ export default async function BlogPage({ params }: PostProps) {
         </p>
       )}
       <Mdx code={post.body.code} />
-      <Link className="font-light flex gap-1 items-center text-pink-400 hover:text-pink-500 decoration-transparent w-fit" href="/blog">
+      <Link className="font-light flex gap-1 items-center text-pink-400 hover:text-pink-500 decoration-transparent w-fit" href="/thoughts">
         <BiLeftArrowAlt />
         go back
       </Link>
