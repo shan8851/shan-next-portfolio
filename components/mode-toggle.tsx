@@ -27,7 +27,7 @@ export function ModeToggle() {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-4 h-4">
+          className="w-4 h-4 hover:stroke-black">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -41,7 +41,7 @@ export function ModeToggle() {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-8 h-8">
+          className="w-8 h-8 hover:stroke-yellow-500">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
