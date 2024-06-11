@@ -1,6 +1,6 @@
 export default function Now() {
   return (
-    <div className="prose dark:prose-invert p-4 text-md">
+    <div className="prose dark:prose-invert p-4 text-md max-w-full">
       › This page was inspired by the{' '}
       <a
         className="decoration-transparent text-pink-400 hover:text-pink-500"

@@ -52,7 +52,7 @@ export default async function ThoughtPage({ params }: PostProps) {
   }
 
   return (
-    <article className="p-4 prose dark:prose-invert text-lg">
+    <article className="p-4 prose dark:prose-invert  max-w-full">
       <Link className="font-light flex gap-1 items-center text-pink-400 hover:text-pink-500 decoration-transparent w-fit" href="/thoughts">
         <BiLeftArrowAlt />
         go back

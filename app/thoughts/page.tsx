@@ -8,7 +8,7 @@ export default function ThoughtsIndex() {
   }
   )
   return (
-    <div className="prose dark:prose-invert p-4">
+    <div className="prose dark:prose-invert p-4 max-w-full">
       <h2 className="m-0 mb-4">Thoughts</h2>
       {postsByDate.map((post) => {
       const date = dayjs(post.date).format("MMMM DD, YYYY")
