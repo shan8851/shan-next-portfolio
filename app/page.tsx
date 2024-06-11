@@ -8,7 +8,7 @@ export default function Home() {
     <div className="prose dark:prose-invert max-w-full h-full flex flex-col">
 
       <div className="flex-1 hidden md:flex flex-col md:flex-row divide-x divide-green-500 h-full border-b border-green-500 md:h-0">
-        <div className="flex-1 md:w-1/2 md:overflow-y-auto">
+        <div className="flex-1 md:w-1/2 md:overflow-y-auto pb-4">
           <RecentPosts />
         </div>
         <div className="flex-1 md:w-1/2 md:overflow-y-auto">

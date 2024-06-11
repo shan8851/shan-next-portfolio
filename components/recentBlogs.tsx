@@ -25,7 +25,7 @@ export const RecentPosts: React.FC = () => {
             <article className="flex flex-col mb-6" key={post._id}>
               <Link
                 href={post.slug}
-                className="text-green-500 hover:text-green-800 decoration-transparent"
+                className="text-green-500 hover:text-green-800 decoration-transparent w-fit"
               >
                 {`-${post.title}`}
               </Link>

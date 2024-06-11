@@ -11,7 +11,7 @@ export interface ProjectProps {
 const Project: React.FC<ProjectProps> = ({ title, description, tags, url }) => {
   return (
     <div className="flex flex-col">
-      <a href={url} className="text-md text-green-500 hover:text-green-800 decoration-transparent">
+      <a href={url} className="text-md text-green-500 hover:text-green-800 decoration-transparent w-fit">
         {`-${title}`}
       </a>
       {tags && (
