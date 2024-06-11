@@ -52,20 +52,19 @@ export default async function BlogPage({ params }: PostProps) {
   }
 
   return (
-    <article className="py-2 prose dark:prose-invert text-lg">
-      <Link className="font-light flex gap-1 text-slate-600 hover:text-black items-center my-4 dark:text-slate-300 dark:hover:text-white" href="/blog">
+    <article className="p-4 prose dark:prose-invert text-lg">
+      <Link className="font-light flex gap-1 items-center text-pink-400 hover:text-pink-500 decoration-transparent w-fit" href="/blog">
         <BiLeftArrowAlt />
         go back
       </Link>
-      <h1 className="mb-2">{post.title}</h1>
+      <h3 className="mb-2 text-green-500">{`-${post.title}`}</h3>
       {post.description && (
-        <p className="text-2xl mt-0 text-slate-700 dark:text-slate-200">
+        <p className="text-lg mt-0 pl-4 text-orange-400">
           {post.description}
         </p>
       )}
-      <hr className="my-4" />
       <Mdx code={post.body.code} />
-      <Link className="font-light flex gap-1 text-slate-600 hover:text-black items-center my-4 dark:text-slate-300 dark:hover:text-white" href="/blog">
+      <Link className="font-light flex gap-1 items-center text-pink-400 hover:text-pink-500 decoration-transparent w-fit" href="/blog">
         <BiLeftArrowAlt />
         go back
       </Link>

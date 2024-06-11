@@ -10,22 +10,21 @@ export interface ProjectProps {
 
 const Project: React.FC<ProjectProps> = ({ title, description, tags, url }) => {
   return (
-    <div className="flex flex-col gap-2">
-      <div className="flex gap-4 items-center">
-        <a href={url} className="text-lg font-bold underline">
-        {title}
-        </a>
-        {tags && (
-          <div className='flex gap-1'>
+    <div className="flex flex-col">
+      <a href={url} className="text-md text-green-500 hover:text-green-800 decoration-transparent">
+        {`-${title}`}
+      </a>
+      {tags && (
+        <div className='flex gap-1 pl-4'>
           {tags.map((tag, index) => (
-          <span key={index} className="text-xs bg-slate-300 dark:bg-slate-700 py-0.5 px-1 rounded-md">
-            {tag}
-          </span>
-        ))}
+            <React.Fragment key={index}>
+              <span className="text-sm text-orange-400">{tag}</span>
+              {index < tags.length - 1 && <span className="text-sm text-orange-400">, </span>}
+            </React.Fragment>
+          ))}
         </div>
-        )}
-      </div>
-      <p className="mt-2 mb-4 text-md">
+      )}
+      <p className="pl-4 m-0 text-md">
         {description}
       </p>
     </div>
@@ -34,9 +33,10 @@ const Project: React.FC<ProjectProps> = ({ title, description, tags, url }) => {
 
 
 
+
 export const ProjectsPage: React.FC = () => {
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-1 px-4">
       <h3>Projects</h3>
       <p className="text-md">I&apos;m pretty much always tinkering with something, usually it is my gateway to learning new tech, all my projects are generally great learning experience, but naturally some are more complete than others. Below are a few of my favorites.</p>
       <div>
