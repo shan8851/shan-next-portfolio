@@ -27,13 +27,13 @@ export const RecentPosts: React.FC = () => {
                 href={post.slug}
                 className="text-green-500 hover:text-green-800 decoration-transparent w-fit"
               >
-                {`-${post.title}`}
+                {`› ${post.title}`}
               </Link>
-              <p className="text-sm font-light pl-4 m-0 text-orange-400">
+              <p className="text-sm font-light pl-6 m-0 text-orange-400">
                 {date}
               </p>
               {post.description && (
-                <p className="text-md m-0 pl-4">{post.description}</p>
+                <p className="text-md m-0 pl-6">{post.description}</p>
               )}
             </article>
           );

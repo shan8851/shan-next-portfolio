@@ -57,9 +57,9 @@ export default async function ThoughtPage({ params }: PostProps) {
         <BiLeftArrowAlt />
         go back
       </Link>
-      <h3 className="mb-2 text-green-500">{`-${post.title}`}</h3>
+      <h3 className="mb-2 text-green-500">{`› ${post.title}`}</h3>
       {post.description && (
-        <p className="text-lg mt-0 pl-4 text-orange-400">
+        <p className="text-lg mt-0 pl-6 text-orange-400">
           {post.description}
         </p>
       )}

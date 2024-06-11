@@ -12,10 +12,10 @@ const Project: React.FC<ProjectProps> = ({ title, description, tags, url }) => {
   return (
     <div className="flex flex-col">
       <a href={url} className="text-md text-green-500 hover:text-green-800 decoration-transparent w-fit">
-        {`-${title}`}
+        {`› ${title}`}
       </a>
       {tags && (
-        <div className='flex gap-1 pl-4'>
+        <div className='flex gap-1 pl-6'>
           {tags.map((tag, index) => (
             <React.Fragment key={index}>
               <span className="text-sm text-orange-400">{tag}</span>
@@ -24,7 +24,7 @@ const Project: React.FC<ProjectProps> = ({ title, description, tags, url }) => {
           ))}
         </div>
       )}
-      <p className="pl-4 m-0 text-md">
+      <p className="pl-6 m-0 text-md">
         {description}
       </p>
     </div>
