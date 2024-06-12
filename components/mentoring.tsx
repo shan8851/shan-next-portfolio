@@ -6,7 +6,6 @@ import {
 
 export const Mentoring: React.FC = () => (
   <div className="flex flex-col gap-3">
-    <h2 className="m-0">Mentoring</h2>
     <p className="text-md m-0">
       I&apos;ve been mentoring for a few years now, starting with friends and
       then members of communities I am involved in. I got a lot out of this,

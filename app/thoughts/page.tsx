@@ -1,6 +1,7 @@
 import { allPosts } from "@/.contentlayer/generated"
 import dayjs from "dayjs"
 import Link from "next/link"
+import { BiLeftArrowAlt } from "react-icons/bi";
 
 export default function ThoughtsIndex() {
   const postsByDate = allPosts.sort((a, b) => {
@@ -9,7 +10,11 @@ export default function ThoughtsIndex() {
   )
   return (
     <div className="prose dark:prose-invert p-4 max-w-full">
-      <h2 className="m-0 mb-4">Thoughts</h2>
+      <Link className="font-light flex gap-1 items-center text-pink-400 hover:text-pink-500 decoration-transparent w-fit" href="/">
+        <BiLeftArrowAlt />
+        go back home
+      </Link>
+      <h2 className="m-0 my-4">Thoughts</h2>
       {postsByDate.map((post) => {
       const date = dayjs(post.date).format("MMMM DD, YYYY")
       return (

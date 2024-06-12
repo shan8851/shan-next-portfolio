@@ -17,20 +17,12 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
-      <body className="antialiased h-screen bg-[var(--tw-prose-pre-bg)] dark:bg-[var(--tw-prose-pre-bg)] max-w-full font-mono">
+    <html suppressHydrationWarning lang="en">
+      <body className="antialiased h-screen bg-[var(--tw-prose-pre-bg)] dark:[var(--tw-prose-pre-bg)] max-w-full font-mono">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="flex flex-col h-screen border-4 md:border-8 border-green-500">
+          <div className="flex flex-col h-screen">
             <header className="flex-shrink-0  border-b border-green-500 w-full">
-              <div className="flex items-center gap-6 border-b border-green-500 py-4 pl-4">
-                <ModeToggle />
-                <nav className="text-sm font-medium space-x-6">
-                  <Link className="hover:text-pink-400 underline" href="/">home</Link>
-                  <Link className="hover:text-pink-400 underline" href="/now">/now</Link>
-                  <Link className="hover:text-pink-400 underline" href="/cv">cv</Link>
-                  <Link className="hover:text-pink-400 underline" href="/thoughts">thoughts</Link>
-                </nav>
-              </div>
+
               <div className="flex-shrink-0 pl-4">
         <Header />
       </div>
