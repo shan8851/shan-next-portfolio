@@ -2,7 +2,6 @@ import Link from "next/link"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Analytics } from "@/components/analytics"
-import { ModeToggle } from "@/components/mode-toggle"
 import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
 import { Source_Code_Pro } from 'next/font/google'
