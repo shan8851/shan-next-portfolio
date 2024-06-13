@@ -82,7 +82,7 @@ const Project: React.FC<ProjectProps> = ({ title, description, tags, url }) => {
 export const ProjectsPage: React.FC = ({ projectId }: {projectId?:any}) => {
   console.debug('projectId', projectId);
   return (
-    <div className="flex flex-col gap-1 px-4">
+    <div className="flex flex-col gap-1">
         {projectsData.map((project, index) => (
           <Project
             key={index}

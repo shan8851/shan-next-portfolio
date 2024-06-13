@@ -5,6 +5,8 @@ import { Analytics } from "@/components/analytics"
 import { ModeToggle } from "@/components/mode-toggle"
 import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
+import { Source_Code_Pro } from 'next/font/google'
+
 
 export const metadata = {
   title: "Shan8851",
@@ -15,10 +17,16 @@ interface RootLayoutProps {
   children: React.ReactNode
 }
 
+const sourceCodePro = Source_Code_Pro({
+  weight: ["400", "700", "900"],
+  subsets: ["latin"],
+  display: "swap",
+})
+
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html suppressHydrationWarning lang="en">
-      <body className="antialiased h-screen bg-[var(--tw-prose-pre-bg)] dark:[var(--tw-prose-pre-bg)] max-w-full font-mono">
+      <body className={`${sourceCodePro.className} antialiased h-screen bg-[var(--tw-prose-pre-bg)] dark:[var(--tw-prose-pre-bg)] max-w-full`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="flex flex-col h-screen">
             <header className="flex-shrink-0  border-b border-green-500 w-full">
