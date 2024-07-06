@@ -15,7 +15,7 @@ export const Job = ({ jobDetails }: JobProps) => {
   return (
     <div className="mb-4">
       <div className="flex justify-between item-center">
-        <h4 className="m-0">{company}</h4>
+        <h4 className="m-0 text-orange-400">{company}</h4>
         <p className="m-0 text-slate-400 font-light">{date}</p>
       </div>
       <div className="flex justify-between items-center">

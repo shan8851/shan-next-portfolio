@@ -10,9 +10,9 @@ export interface ProjectProps {
 
 const Project: React.FC<ProjectProps> = ({ title, description, tags, url }) => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 border-b mb-3">
       <div className="flex gap-4 items-center">
-        <a href={url} className="text-lg font-bold underline">
+        <a href={url} className="text-md font-bold no-underline text-pink-400 hover:underline">
         {title}
         </a>
         {tags && (
@@ -37,7 +37,7 @@ const Project: React.FC<ProjectProps> = ({ title, description, tags, url }) => {
 export const ProjectsPage: React.FC = () => {
   return (
     <div className="flex flex-col gap-3">
-      <h3>Projects</h3>
+      <h3 className="text-green-400">Projects</h3>
       <p className="text-md">I&apos;m pretty much always tinkering with something, usually it is my gateway to learning new tech, all my projects are generally great learning experience, but naturally some are more complete than others. Below are a few of my favorites.</p>
       <div>
         {projectsData.map((project, index) => (

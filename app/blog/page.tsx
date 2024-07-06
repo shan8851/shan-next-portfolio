@@ -9,14 +9,14 @@ export default function BlogIndex() {
   )
   return (
     <div className="prose dark:prose-invert">
-      <h2 className="mt-12">Blog</h2>
+      <h2 className="mt-12 text-green-400">Blog</h2>
       {postsByDate.map((post) => {
       const date = dayjs(post.date).format("MMMM DD, YYYY")
       return (
-        <article className="mb-6" key={post._id}>
-          <div className="flex justify-between items-center">
-            <Link href={post.slug} className="flex-grow">
-              <h4 className="m-0">{post.title}</h4>
+        <article className="mb-3 pb-3 border-b" key={post._id}>
+          <div className="flex justify-between gap-4">
+            <Link href={post.slug} className="flex-grow no-underline">
+              <h4 className="m-0 text-pink-400 hover:underline">{post.title}</h4>
             </Link>
             <p className="text-sm font-light whitespace-nowrap m-0">{date}</p>
           </div>

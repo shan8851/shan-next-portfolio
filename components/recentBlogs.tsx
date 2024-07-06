@@ -9,16 +9,16 @@ export const RecentPosts: React.FC = () => {
   }).slice(0, 3 || allPosts.length);
   return (
     <div className="flex flex-col gap-3">
-      <h3>Recent posts</h3>
+      <h3 className="text-green-400">Recent posts</h3>
       <p className="text-md">Writing is something that I have always enjoyed. I have kept numerous blogs in the past documenting things from everyday life to my journey in development. Mostly now my writing focusses on my general musings around the tech space and helping people land their first role in the industry.</p>
       <div>
         {sortedAndLimitedPosts.map((post) => {
       const date = dayjs(post.date).format("MMMM DD, YYYY")
       return (
-        <article className="mb-6"  key={post._id}>
-          <div className="flex justify-between items-center">
-            <Link href={post.slug} className="flex-grow">
-              <h4 className="m-0">{post.title}</h4>
+        <article className="mb-3 pb-3 border-b"  key={post._id}>
+          <div className="flex justify-between gap-4">
+            <Link href={post.slug} className="flex-grow no-underline">
+              <h4 className="m-0 text-pink-400 hover:underline">{post.title}</h4>
             </Link>
             <p className="text-sm font-light whitespace-nowrap m-0">{date}</p>
           </div>
@@ -28,7 +28,7 @@ export const RecentPosts: React.FC = () => {
            </div>
         </article>
       )})}
-      <Link className="font-light flex gap-1 text-slate-600 hover:text-black items-center my-4 dark:text-slate-300 dark:hover:text-white" href="/blog">
+      <Link className="font-light flex gap-1 text-pink-400 items-center my-4 no-underline hover:underline" href="/blog">
         all posts
         <BiRightArrowAlt />
       </Link>

@@ -20,15 +20,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
     <body className={`antialiased min-h-screen bg-[var(--tw-prose-pre-bg)] dark:[var(--tw-prose-pre-bg)]  font-mono`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="flex flex-col min-h-screen max-w-3xl p-3">
+          <div className="flex flex-col min-h-screen max-w-2xl p-3 mx-auto">
             <header>
               <div className="flex items-center gap-6">
                 <ModeToggle />
                 <nav className="text-sm font-medium space-x-6">
-                  <Link className="hover:underline" href="/">home</Link>
-                  <Link className="hover:underline" href="/now">/now</Link>
-                  <Link className="hover:underline" href="/cv">cv</Link>
-                  <Link className="hover:underline" href="/blog">blog</Link>
+                  <Link className="hover:underline hover:text-pink-400" href="/">home</Link>
+                  <Link className="hover:underline hover:text-pink-400" href="/now">/now</Link>
+                  <Link className="hover:underline hover:text-pink-400" href="/cv">cv</Link>
+                  <Link className="hover:underline hover:text-pink-400" href="/blog">blog</Link>
                 </nav>
 
               </div>
