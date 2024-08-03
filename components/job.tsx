@@ -2,7 +2,6 @@ export interface JobDetails {
   company: string;
   title: string;
   date: string;
-  location: string;
   description: string[];
 }
 
@@ -11,7 +10,7 @@ interface JobProps {
 }
 
 export const Job = ({ jobDetails }: JobProps) => {
-  const {company, title, date, location, description} = jobDetails
+  const { company, title, date, description } = jobDetails;
   return (
     <div className="mb-4">
       <div className="flex justify-between item-center">
@@ -20,7 +19,6 @@ export const Job = ({ jobDetails }: JobProps) => {
       </div>
       <div className="flex justify-between items-center">
         <p className="m-0">{title}</p>
-        <p className="m-0 text-slate-400 font-light">{location}</p>
       </div>
       <ul>
         {description.map((item: string, index: number) => (
@@ -28,5 +26,5 @@ export const Job = ({ jobDetails }: JobProps) => {
         ))}
       </ul>
     </div>
-  )
+  );
 }

@@ -11,15 +11,35 @@ export const Mentoring: React.FC = () => (
       I&apos;ve been mentoring for a few years now, starting with friends and
       then members of communities I am involved in. I got a lot out of this,
       helped numerous people land their first jobs, so decided to mentor on
-      platforms like coding coach and The Mentoring Club. Mentoring on those platforms is hit and miss, so I am not really active there now.
-      However I am still looking to work with new people who are a good fit, so anybody interested can reach out to me via{' '}
-      <a className='text-pink-400 no-underline hover:underline' href={EMAIL_URL} target="_blank">
+      platforms like coding coach and The Mentoring Club.
+    </p>
+    <p>
+      Mentoring on those platforms is hit and miss, so I am not really active
+      there now. However I am always open to helping people who are genuinely
+      looking to improve and transition into the industry. You can reach me via{' '}
+      <a
+        className="text-pink-400 no-underline hover:underline"
+        href={EMAIL_URL}
+        target="_blank"
+      >
         email
       </a>{' '}
       , DM me on{' '}
-      <a className='text-pink-400 no-underline hover:underline' href={TWITTER_URL} target="_blank">
+      <a
+        className="text-pink-400 no-underline hover:underline"
+        href={TWITTER_URL}
+        target="_blank"
+      >
         Twitter
-      </a>{' '} or simply <a className='text-pink-400 no-underline hover:underline' href={BOOK_A_CALL_URL} target="_blank">book a call with me</a>{' '}
+      </a>{' '}
+      or simply{' '}
+      <a
+        className="text-pink-400 no-underline hover:underline"
+        href={BOOK_A_CALL_URL}
+        target="_blank"
+      >
+        book a call with me
+      </a>{' '}
       and we can work something out.
     </p>
   </div>

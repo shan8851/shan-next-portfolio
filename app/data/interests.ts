@@ -1,8 +1,8 @@
 export const interestsData = [
-  "Blockchain",
-  "DeFi",
-  "MMA",
-  "Motorcycles",
-  "The Big Bang Theory",
-  "BJJ"
-]
+  'Blockchain',
+  'DeFi',
+  'Football',
+  'Motorcycles',
+  'The Big Bang Theory',
+  'MMA',
+];
