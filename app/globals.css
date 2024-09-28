@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Comic Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/CominMono.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Comic Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/CominMono-Bold.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Comic Mono', monospace;
+}
