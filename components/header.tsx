@@ -18,8 +18,8 @@ export const Header = () => (
       learner
     </p>
     <p className="m-0 text-md font-light">
-      Experienced software engineer and mentor passionate about open source,
-      web3 and helping people break into tech.
+      Endlessly curious experienced software engineer passionate about open
+      source software, onchain governance and web3.
     </p>
   </div>
 );

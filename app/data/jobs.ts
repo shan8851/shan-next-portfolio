@@ -27,7 +27,7 @@ export const jobsData: JobDetails[] = [
     description: [
       'Directed the technical product life cycle of 4 applications, embodying dedication to innovation, quality, and operational excellence.',
       'Collaborated with tech leads, addressing tech debt and delivering solutions meeting company SLAs.',
-      'Identified and resolved hardware, software, and network issues, safeguarding smooth operations servingthousands of customers.',
+      'Identified and resolved hardware, software, and network issues, safeguarding smooth operations serving thousands of customers.',
     ],
   },
   {

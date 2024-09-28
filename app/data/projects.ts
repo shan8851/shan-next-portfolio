@@ -5,8 +5,8 @@ export const projectsData: ProjectProps[] = [
     title: '_seopSip',
     description:
       'A sepolia faucet allowing devs to request and donate test Eth. Smart contract was built, tested and deployed with Foundry - paired with a NextJS frontend with wagmi, tanstack query and Typescript. There are time limits for withdraws and a donator leaderboard',
-    tags: ['Solidity', 'NextJS', 'Web3'],
-    url: 'https://rinkedry.vercel.app/',
+    tags: ['Solidity', 'NextJS', 'Web3, wagmi'],
+    url: 'https://sepo-sip.vercel.app/',
   },
   {
     title: 'hooked-on-react',
@@ -32,7 +32,7 @@ export const projectsData: ProjectProps[] = [
   {
     title: 'MAC-Insurance',
     description:
-      "Insurance protocol to protect from ERC20 token from price loss. Built as part of small team for the Ethglobal hackathon. Mac Insurance project took first place for 'best use' and second place for the 'best app' categories.",
+      "Insurance protocol to protect ERC20 token from price loss. Built as part of small team for the Ethglobal hackathon. Mac Insurance project took first place for 'best use' and second place for the 'best app' categories.",
     tags: ['NextJS', 'TheGraph', 'Solidity'],
     url: 'https://ethglobal.com/showcase/mac-insurance-r1g12',
   },
