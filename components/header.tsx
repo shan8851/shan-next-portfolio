@@ -10,7 +10,7 @@ export const Header = () => (
         height={100}
         width={100}
       />
-      <h1 className="m-0 font-extrabold">Shan8851</h1>
+      <h1 className="m-0 font-extrabold">shan8851.eth ᵍᵐ</h1>
     </div>
     <p className="m-0 text-xl font-bold mb-2">
       <span className="line-through">Javascript</span>{' '}
