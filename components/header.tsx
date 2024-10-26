@@ -18,8 +18,8 @@ export const Header = () => (
       learner
     </p>
     <p className="m-0 text-md font-light">
-      Endlessly curious experienced software engineer passionate about open
-      source software, onchain governance and web3.
+      Endlessly curious experienced software engineer passionate about privacy,
+      decentralisation, open source software and onchain governance.
     </p>
   </div>
 );
