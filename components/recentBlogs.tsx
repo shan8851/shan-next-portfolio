@@ -11,12 +11,13 @@ export const RecentPosts: React.FC = () => {
     .slice(0, 3 || allPosts.length);
   return (
     <div className="flex flex-col gap-3">
-      <h3 className="text-green-400">Recent posts</h3>
+      <h3 className="text-green-400">Writing</h3>
       <p className="text-md">
-        Writing has always been part of how I learn and reflect. Over the years, I&apos;ve kept blogs on everything from
-        dev life to breaking into tech. These days, I’m focused on topics like DAO tooling, full-stack engineering in
-        Web3, and helping others navigate the space.
+        Writing has always been part of how I learn and reflect. Over the years, I’ve kept blogs on everything from dev
+        life to breaking into tech. These days, I’m focused on DAO tooling, full-stack engineering in Web3, and helping
+        others navigate the space.
       </p>
+
       <div>
         {sortedAndLimitedPosts.map((post) => {
           const date = dayjs(post.date).format("MMMM DD, YYYY");

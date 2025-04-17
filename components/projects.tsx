@@ -33,11 +33,13 @@ const Project: React.FC<ProjectProps> = ({ title, description, tags, url }) => {
 export const ProjectsPage: React.FC = () => {
   return (
     <div className="flex flex-col gap-3">
-      <h3 className="text-green-400">Projects</h3>
+      <h3 className="text-green-400">Tinkering</h3>
       <p className="text-md">
-        I’m always building. These projects are how I explore new tech, test ideas, and deepen my skills across the
-        stack. Some are polished tools, others are experiments, but all reflect where I’m going as an engineer.
+        I treat projects like prototypes: quick builds to explore new patterns, tools, or mental models. Some grow into
+        real tools, others are pure learning. Either way, they’re a core part of how I stay sharp and push deeper into
+        the stack.
       </p>
+
       <div>
         {projectsData.map((project, index) => (
           <Project
