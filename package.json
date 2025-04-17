@@ -10,11 +10,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.5.9",
+    "@tailwindcss/typography": "^0.5.16",
     "@types/node": "18.16.1",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
-    "@vercel/analytics": "^1.0.0",
+    "@vercel/analytics": "^1.5.0",
     "autoprefixer": "10.4.14",
     "contentlayer": "^0.3.2",
     "dayjs": "^1.11.10",
@@ -28,10 +28,10 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.11.0",
     "rehype-autolink-headings": "^7.0.0",
-    "rehype-pretty-code": "^0.10.2",
+    "rehype-pretty-code": "^0.14.1",
     "rehype-slug": "^6.0.0",
-    "remark-gfm": "^4.0.0",
-    "shiki": "^0.14.5",
+    "remark-gfm": "^4.0.1",
+    "shiki": "^3.2.2",
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4"
   }
