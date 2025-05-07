@@ -1,25 +1,43 @@
-import Image from "next/image";
+import { EMAIL_URL } from '@/app/constants';
+import Image from 'next/image';
+import { LuDownload, LuMail } from 'react-icons/lu';
 
 export const Header = () => (
-  <div className="flex flex-col py-4">
-    <div className="flex items-center gap-2">
+  <header className="flex flex-col gap-6 pt-10">
+    <div className="flex items-center gap-4">
       <Image
-        className="rounded-full h-10 w-10"
+        className="rounded-full h-12 w-12 border border-border"
         src="/avatar.png"
         alt="avatar"
-        height={100}
-        width={100}
+        height={48}
+        width={48}
       />
-      <h1 className="m-0 font-extrabold">shan8851.eth ᵍᵐ</h1>
+      <h1 className="text-2xl font-extrabold text-green tracking-tight">
+        shan8851.eth <span className="text-textSecondary">ᵍᵐ</span>
+      </h1>
     </div>
-    <p className="m-0 text-xl font-bold mb-2">
-      <span>Full Stack</span>{' '}
-      <span className="text-green-400">Web3 Engineer</span>, Governance Builder,
-      Relentless Learner
+
+    <p className="text-lg font-medium leading-snug text-text">
+      Full Stack <span className="text-purple">Web3 Engineer</span>, Governance
+      Builder, Relentless Learner
     </p>
-    <p className="m-0 text-md font-light">
+
+    <p className="text-base leading-relaxed text-textSecondary max-w-prose">
       Designing intuitive interfaces, shaping protocol UX, and building
       end-to-end systems for DAOs, DeFi, and decentralised infrastructure.
     </p>
-  </div>
+    <div className="flex items-center gap-2">
+      <button className="border border-border rounded-xl hover:bg-surface py-2 px-4 flex gap-2 items-center">
+        <LuDownload />
+        Download CV
+      </button>
+      <a
+        href={EMAIL_URL}
+        className="border border-border rounded-xl hover:bg-surface py-2 px-4 flex gap-2 items-center"
+      >
+        <LuMail />
+        Contact me
+      </a>
+    </div>
+  </header>
 );

@@ -12,18 +12,20 @@ interface PostProps {
   };
 }
 
-async function getPostFromParams(params: PostProps["params"]) {
-  const slug = params?.slug?.join("/");
+async function getPostFromParams(params: PostProps['params']) {
+  const slug = params?.slug?.join('/');
   const post = allPosts.find((post) => post.slugAsParams === slug);
 
   if (!post) {
-    null;
+    return null;
   }
 
   return post;
 }
 
-export async function generateMetadata({ params }: PostProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PostProps): Promise<Metadata> {
   const post = await getPostFromParams(params);
 
   if (!post) {
@@ -36,9 +38,9 @@ export async function generateMetadata({ params }: PostProps): Promise<Metadata>
   };
 }
 
-export async function generateStaticParams(): Promise<PostProps["params"][]> {
+export async function generateStaticParams(): Promise<PostProps['params'][]> {
   return allPosts.map((post) => ({
-    slug: post.slugAsParams.split("/"),
+    slug: post.slugAsParams.split('/'),
   }));
 }
 
@@ -50,20 +52,27 @@ export default async function BlogPage({ params }: PostProps) {
   }
 
   return (
-    <article className="py-2 prose dark:prose-invert text-lg">
+    <article className="py-2 text-text text-lg">
       <Link
-        className="font-light flex gap-1 text-slate-600 hover:text-black items-center my-4 dark:text-slate-300 dark:hover:text-white"
+        className="font-light flex gap-1 text-textSecondary hover:text-purple items-center my-4 transition-colors"
         href="/blog"
       >
         <BiLeftArrowAlt />
         go back
       </Link>
-      <h2 className="text-green-400 mb-2">{post.title}</h2>
-      {post.description && <p className="text-xl mt-0 text-slate-700 dark:text-slate-200">{post.description}</p>}
-      <hr className="my-4" />
+
+      <h2 className="text-green text-2xl font-semibold mb-2">{post.title}</h2>
+
+      {post.description && (
+        <p className="text-xl mt-0 text-textSecondary">{post.description}</p>
+      )}
+
+      <hr className="my-4 border-border" />
+
       <Mdx code={post.body.code} />
+
       <Link
-        className="font-light flex gap-1 text-slate-600 hover:text-black items-center my-4 dark:text-slate-300 dark:hover:text-white"
+        className="font-light flex gap-1 text-textSecondary hover:text-purple items-center my-6 transition-colors"
         href="/blog"
       >
         <BiLeftArrowAlt />

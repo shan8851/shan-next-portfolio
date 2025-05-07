@@ -45,20 +45,17 @@ export async function generateStaticParams(): Promise<PostProps["params"][]> {
 export default async function PostPage({ params }: PostProps) {
   const post = await getPostFromParams(params)
 
-  if (!post) {
-    notFound()
-  }
+  if (!post) notFound();
 
   return (
-    <article className="py-6 prose dark:prose-invert">
-      <h1 className="mb-2">{post.title}</h1>
+    <article className="py-10 px-4 max-w-3xl mx-auto">
+      <h1 className="text-3xl md:text-4xl font-bold mb-4 text-brand-primary">
+        {post.title}
+      </h1>
       {post.description && (
-        <p className="text-lg mt-0 text-slate-700 dark:text-slate-200">
-          {post.description}
-        </p>
+        <p className="text-lg text-muted-foreground mb-6">{post.description}</p>
       )}
-      <hr className="my-4" />
       <Mdx code={post.body.code} />
     </article>
-  )
+  );
 }

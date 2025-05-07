@@ -11,20 +11,19 @@ interface JobProps {
 
 export const Job = ({ jobDetails }: JobProps) => {
   const { company, title, date, description } = jobDetails;
+
   return (
-    <div className="mb-4">
-      <div className="flex justify-between item-center">
-        <h4 className="m-0 text-orange-400">{company}</h4>
-        <p className="m-0 text-slate-400 font-light">{date}</p>
-      </div>
+    <div className="space-y-2 border-b border-border pb-4">
       <div className="flex justify-between items-center">
-        <p className="m-0">{title}</p>
+        <h4 className="text-green font-semibold">{company}</h4>
+        <p className="text-sm text-textSecondary">{date}</p>
       </div>
-      <ul>
-        {description.map((item: string, index: number) => (
+      <p className="text-base text-text">{title}</p>
+      <ul className="list-disc list-inside space-y-1 text-textSecondary text-sm">
+        {description.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
       </ul>
     </div>
   );
-}
+};

@@ -1,5 +1,5 @@
-import { projectsData } from "@/app/data/projects";
-import React from "react";
+import { projectsData } from '@/app/data/projects';
+import React from 'react';
 
 export interface ProjectProps {
   title: string;
@@ -10,37 +10,52 @@ export interface ProjectProps {
 
 const Project: React.FC<ProjectProps> = ({ title, description, tags, url }) => {
   return (
-    <div className="flex flex-col gap-2 border-b mb-3">
-      <div className="flex gap-4 items-center">
-        <a href={url} className="text-md font-bold no-underline text-pink-400 hover:underline">
+    <div className="flex flex-col gap-2 border-b border-border pb-4">
+      <div className="flex items-center justify-between flex-wrap gap-3">
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-lg font-medium text-text hover:text-purple transition-colors"
+        >
           {title}
         </a>
         {tags && (
-          <div className="flex gap-1">
+          <div className="flex flex-wrap gap-2">
             {tags.map((tag, index) => (
-              <span key={index} className="text-xs bg-slate-300 dark:bg-slate-700 py-0.5 px-1 rounded-md">
+              <span
+                key={index}
+                className="text-xs bg-surface text-textSecondary px-2 py-0.5 rounded-md border border-border"
+              >
                 {tag}
               </span>
             ))}
           </div>
         )}
       </div>
-      <p className="mt-2 mb-4 text-md">{description}</p>
+      <p className="text-sm text-textSecondary leading-relaxed">
+        {description}
+      </p>
     </div>
   );
 };
 
 export const ProjectsPage: React.FC = () => {
   return (
-    <div className="flex flex-col gap-3">
-      <h3 className="text-green-400">Tinkering</h3>
-      <p className="text-md">
-        I treat projects like prototypes: quick builds to explore new patterns, tools, or mental models. Some grow into
-        real tools, others are pure learning. Either way, they’re a core part of how I stay sharp and push deeper into
-        the stack.
-      </p>
-
+    <section className="flex flex-col gap-6">
       <div>
+        <h3 className="text-green font-semibold tracking-tight text-xl">
+          Tinkering
+        </h3>
+        <p className="text-base text-textSecondary mt-2 max-w-prose">
+          I treat projects like prototypes: quick builds to explore new
+          patterns, tools, or mental models. Some grow into real tools, others
+          are pure learning. Either way, they’re a core part of how I stay sharp
+          and push deeper into the stack.
+        </p>
+      </div>
+
+      <div className="flex flex-col gap-6">
         {projectsData.map((project, index) => (
           <Project
             key={index}
@@ -51,6 +66,6 @@ export const ProjectsPage: React.FC = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };

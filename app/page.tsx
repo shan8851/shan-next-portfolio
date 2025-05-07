@@ -5,7 +5,7 @@ import { RecentPosts } from "@/components/recentBlogs";
 
 export default function Home() {
   return (
-    <div className="prose dark:prose-invert">
+    <div className=" max-w-3xl w-full flex flex-col gap-12">
       <Header />
       <RecentPosts />
       <ProjectsPage />

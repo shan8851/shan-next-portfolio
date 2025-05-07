@@ -1,57 +1,74 @@
-import { BUY_COFFEE_URL, EMAIL_URL, GITHUB_URL, LINKEDIN_URL, TWITTER_URL } from "@/app/constants";
-import { HiOutlineMail } from "react-icons/hi";
-import { RiLinkedinBoxFill, RiTwitterXFill } from "react-icons/ri";
-import { SiBuymeacoffee, SiGithub } from "react-icons/si";
+import {
+  BUY_COFFEE_URL,
+  EMAIL_URL,
+  GITHUB_URL,
+  LINKEDIN_URL,
+  TWITTER_URL,
+} from '@/app/constants';
+import { HiOutlineMail } from 'react-icons/hi';
+import { RiLinkedinBoxFill, RiTwitterXFill } from 'react-icons/ri';
+import { SiBuymeacoffee, SiGithub } from 'react-icons/si';
 
 export const Footer = () => {
   return (
-    <div className="felx flex-col">
-      <div className="flex bg-slate-700 mb-4 h-[1px]" />
-      <div className="flex justify-between items-center py-2">
-        <div>
-          <a href="https://opensource.org/license/mit/" className="hover:underline text-pink-400">
-            MIT
-          </a>{" "}
-          - 2025 © shan8851
+    <footer className="flex flex-col gap-6 text-sm text-textSecondary mt-12">
+      <div className="h-px w-full bg-border" />
+
+      <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="text-center sm:text-left">
+          <a
+            href="https://opensource.org/license/mit/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline hover:text-text transition-colors"
+          >
+            MIT License
+          </a>{' '}
+          – 2025 © shan8851
         </div>
-        <div className="flex gap-2 text-lg">
-          <a
-            target="_blank"
-            className="cursor-pointer text-slate-600 dark:text-slate-400 hover:text-pink-400 hover:dark:text-pink-400"
+
+        <div className="flex gap-4 text-xl">
+          <IconLink
             href={LINKEDIN_URL}
-          >
-            <RiLinkedinBoxFill />
-          </a>
-          <a
-            target="_blank"
-            className="cursor-pointer text-slate-600 dark:text-slate-400 hover:text-pink-400 hover:dark:text-pink-400"
-            href={EMAIL_URL}
-          >
-            <HiOutlineMail />
-          </a>
-          <a
-            target="_blank"
-            className="cursor-pointer text-slate-600 dark:text-slate-400 hover:text-pink-400 hover:dark:text-pink-400"
+            icon={<RiLinkedinBoxFill />}
+            label="LinkedIn"
+          />
+          <IconLink href={EMAIL_URL} icon={<HiOutlineMail />} label="Email" />
+          <IconLink
             href={TWITTER_URL}
-          >
-            <RiTwitterXFill />
-          </a>
-          <a
-            target="_blank"
-            className="cursor-pointer text-slate-600 dark:text-slate-400 hover:text-pink-400 hover:dark:text-pink-400"
-            href={GITHUB_URL}
-          >
-            <SiGithub />
-          </a>
-          <a
-            target="_blank"
-            className="cursor-pointer text-slate-600 dark:text-slate-400 hover:text-pink-400 hover:dark:text-pink-400"
+            icon={<RiTwitterXFill />}
+            label="Twitter"
+          />
+          <IconLink href={GITHUB_URL} icon={<SiGithub />} label="GitHub" />
+          <IconLink
             href={BUY_COFFEE_URL}
-          >
-            <SiBuymeacoffee />
-          </a>
+            icon={<SiBuymeacoffee />}
+            label="Buy Me a Coffee"
+          />
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
+
+function IconLink({
+  href,
+  icon,
+  label,
+}: {
+  href: string;
+  icon: React.ReactNode;
+  label?: string;
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={label}
+      className="text-textSecondary hover:text-purple transition-colors duration-200 hover:scale-105"
+    >
+      {icon}
+    </a>
+  );
+}
