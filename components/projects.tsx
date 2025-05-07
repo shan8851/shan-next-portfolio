@@ -6,11 +6,22 @@ export interface ProjectProps {
   description: string;
   tags?: string[];
   url: string;
+  isLast?: boolean;
 }
 
-const Project: React.FC<ProjectProps> = ({ title, description, tags, url }) => {
+const Project: React.FC<ProjectProps> = ({
+  title,
+  description,
+  tags,
+  url,
+  isLast,
+}) => {
   return (
-    <div className="flex flex-col gap-2 border-b border-border pb-4">
+    <div
+      className={`flex flex-col gap-2 pb-4 ${
+        !isLast ? 'border-b border-border' : ''
+      }`}
+    >
       <div className="flex items-center justify-between flex-wrap gap-3">
         <a
           href={url}
@@ -63,6 +74,7 @@ export const ProjectsPage: React.FC = () => {
             description={project.description}
             tags={project.tags}
             url={project.url}
+            isLast={index === projectsData.length - 1}
           />
         ))}
       </div>

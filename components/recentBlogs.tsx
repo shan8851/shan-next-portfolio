@@ -22,10 +22,14 @@ export const RecentPosts: React.FC = () => {
       </div>
 
       <div className="flex flex-col gap-6">
-        {sortedAndLimitedPosts.map((post) => {
+        {sortedAndLimitedPosts.map((post, index) => {
           const date = dayjs(post.date).format('MMMM DD, YYYY');
+          const isLast = index === sortedAndLimitedPosts.length - 1;
           return (
-            <article className="border-b border-border pb-4" key={post._id}>
+            <article
+              className={`pb-4 ${!isLast ? 'border-b border-border' : ''}`}
+              key={post._id}
+            >
               <div className="flex justify-between items-center mb-1 gap-4">
                 <Link
                   href={post.slug}

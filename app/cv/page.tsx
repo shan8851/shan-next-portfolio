@@ -1,10 +1,19 @@
 import { Job } from '@/components/job';
 import { jobsData } from '../data/jobs';
+import { LuDownload } from 'react-icons/lu';
 
 export default function Cv() {
   return (
     <section className="mt-10 space-y-8 text-base leading-relaxed text-text">
       <div className="space-y-3">
+        <a
+          download
+          href="/cv.pdf"
+          className="w-fit border border-border rounded-xl hover:bg-surface py-2 px-4 flex gap-2 items-center"
+        >
+          <LuDownload />
+          Download CV
+        </a>
         <h2 className="text-xl font-semibold text-green">
           Senior Full Stack Engineer | DeFi Governance & DAO Infrastructure
         </h2>
@@ -48,6 +57,14 @@ export default function Cv() {
           </li>
         </ul>
       </div>
+      <a
+        download
+        href="/cv.pdf"
+        className="w-fit border border-border rounded-xl hover:bg-surface py-2 px-4 flex gap-2 items-center"
+      >
+        <LuDownload />
+        Download CV
+      </a>
     </section>
   );
 }

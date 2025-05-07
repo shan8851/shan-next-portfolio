@@ -9,17 +9,22 @@ export default function BlogIndex() {
 
   return (
     <section className="mt-10 space-y-6 text-base leading-relaxed text-text">
-      <h2 className="text-xl font-semibold text-green">Blog</h2>
+      <h2 className="text-xl font-semibold text-green">Writing</h2>
 
       <div className="flex flex-col gap-6">
-        {postsByDate.map((post) => {
+        {postsByDate.map((post, index) => {
           const date = dayjs(post.date).format('MMMM DD, YYYY');
+          const isLast = index === postsByDate.length - 1;
+
           return (
-            <article key={post._id} className="border-b border-border pb-4">
+            <article
+              key={post._id}
+              className={`pb-4 ${!isLast ? 'border-b border-border' : ''}`}
+            >
               <div className="flex justify-between items-center mb-1 gap-4">
                 <Link
                   href={post.slug}
-                  className="text-lg font-medium text-green hover:text-purple transition-colors"
+                  className="text-lg font-medium text-text hover:text-purple transition-colors"
                 >
                   {post.title}
                 </Link>
