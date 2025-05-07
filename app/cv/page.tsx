@@ -2,42 +2,58 @@ import { Job } from '@/components/job';
 import { jobsData } from '../data/jobs';
 import { LuDownload } from 'react-icons/lu';
 
+const CvSection = ({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) => (
+  <section className="space-y-4">
+    <h2 className="text-2xl font-semibold text-purple">{title}</h2>
+    {children}
+  </section>
+);
+
 export default function Cv() {
   return (
-    <section className="mt-10 space-y-8 text-base leading-relaxed text-text">
-      <div className="space-y-3">
+    <div className="mt-10 space-y-10 text-base leading-relaxed text-text">
+      <header className="space-y-6">
+        <h1 className="text-4xl font-bold text-green">CV</h1>
         <a
           download
           href="/cv.pdf"
-          className="w-fit border border-border rounded-xl hover:bg-surface py-2 px-4 flex gap-2 items-center"
+          className="inline-flex w-fit items-center gap-2 rounded-xl border border-border px-4 py-2 text-sm hover:bg-surface transition-colors"
         >
-          <LuDownload />
-          Download CV
+          <LuDownload className="text-lg" />
+          Download PDF
         </a>
-        <h2 className="text-xl font-semibold text-green">
-          Senior Full Stack Engineer | DeFi Governance & DAO Infrastructure
-        </h2>
-        <p className="text-textSecondary">
-          Frontend-leaning full stack engineer with 6+ years of experience.
-          Currently focused on building governance, treasury, and DeFi analytics
-          tools. At Aragon, I deliver modular DAO interfaces including
-          delegation and advanced voting flows. Previously scaled a DeFi data
-          platform across 16+ EVM chains, and co-founded a B2C startup.
-          Passionate about simplifying complex systems through composable,
-          user-centric tooling. Currently expanding backend and Solidity
-          capabilities to deepen full-stack impact.
-        </p>
-      </div>
 
-      <div className="space-y-4">
-        <h3 className="text-lg font-semibold text-green">Work Experience</h3>
+        <div className="space-y-3 max-w-3xl">
+          <p className="text-lg font-semibold text-purple">
+            Full Stack Engineer · DeFi Governance & DAO Infrastructure
+          </p>
+
+          <p className="text-text">
+            Frontend-leaning full stack engineer with 6+ years of experience.
+            Currently focused on building governance, treasury, and DeFi
+            analytics tools. At Aragon, I deliver modular DAO interfaces
+            including delegation and advanced voting flows. Previously scaled a
+            DeFi data platform across 16+ EVM chains, and co-founded a B2C
+            startup. Passionate about simplifying complex systems through
+            composable, user-centric tooling. Currently expanding backend and
+            Solidity capabilities to deepen full-stack impact.
+          </p>
+        </div>
+      </header>
+
+      <CvSection title="Work Experience">
         {jobsData.map((job) => (
           <Job key={job.company} jobDetails={job} />
         ))}
-      </div>
+      </CvSection>
 
-      <div className="space-y-4">
-        <h3 className="text-lg font-semibold text-green">Tooling & Stack</h3>
+      <CvSection title="Tooling & Stack">
         <ul className="list-disc list-inside space-y-2 text-textSecondary">
           <li>
             <span className="font-semibold text-text">Frontend:</span> React,
@@ -56,15 +72,18 @@ export default function Cv() {
             CI/CD, GitHub Actions
           </li>
         </ul>
+      </CvSection>
+
+      <div className="pt-6 border-t border-border">
+        <a
+          download
+          href="/cv.pdf"
+          className="inline-flex w-fit items-center gap-2 rounded-xl border border-border px-4 py-2 text-sm hover:bg-surface transition-colors"
+        >
+          <LuDownload className="text-lg" />
+          Download CV
+        </a>
       </div>
-      <a
-        download
-        href="/cv.pdf"
-        className="w-fit border border-border rounded-xl hover:bg-surface py-2 px-4 flex gap-2 items-center"
-      >
-        <LuDownload />
-        Download CV
-      </a>
-    </section>
+    </div>
   );
 }

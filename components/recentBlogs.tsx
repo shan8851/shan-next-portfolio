@@ -14,7 +14,7 @@ export const RecentPosts: React.FC = () => {
         <h3 className="text-green font-semibold tracking-tight text-xl">
           Writing
         </h3>
-        <p className="text-textSecondary text-base mt-2 max-w-prose">
+        <p className="text-textSecondary text-base mt-2 leading-loose">
           Writing has always been part of how I learn and reflect. These days
           I’m focused on DAO tooling, full-stack engineering in Web3, and
           helping others navigate the space.

@@ -6,23 +6,23 @@ export const Header = () => (
   <header className="flex flex-col gap-6 pt-10">
     <div className="flex items-center gap-4">
       <Image
-        className="rounded-full h-12 w-12 border border-border"
+        className="rounded-full w-20 h-20 border border-border"
         src="/avatar.png"
         alt="avatar"
-        height={48}
-        width={48}
+        height={100}
+        width={100}
       />
-      <h1 className="text-2xl font-extrabold text-green tracking-tight">
+      <h1 className="text-4xl font-extrabold text-green tracking-tight">
         shan8851.eth <span className="text-textSecondary">ᵍᵐ</span>
       </h1>
     </div>
 
-    <p className="text-lg font-medium leading-snug text-text">
+    <p className="text-xl font-medium leading-snug text-text">
       Full Stack <span className="text-purple">Web3 Engineer</span>, Governance
       Builder, Relentless Learner
     </p>
 
-    <p className="text-base leading-relaxed text-textSecondary max-w-prose">
+    <p className="text-base leading-loose text-textSecondary max-w-prose">
       Designing intuitive interfaces, shaping protocol UX, and building
       end-to-end systems for DAOs, DeFi, and decentralised infrastructure.
     </p>

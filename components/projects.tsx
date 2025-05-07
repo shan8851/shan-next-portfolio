@@ -58,7 +58,7 @@ export const ProjectsPage: React.FC = () => {
         <h3 className="text-green font-semibold tracking-tight text-xl">
           Tinkering
         </h3>
-        <p className="text-base text-textSecondary mt-2 max-w-prose">
+        <p className="text-base text-textSecondary mt-2 leading-loose">
           I treat projects like prototypes: quick builds to explore new
           patterns, tools, or mental models. Some grow into real tools, others
           are pure learning. Either way, they’re a core part of how I stay sharp

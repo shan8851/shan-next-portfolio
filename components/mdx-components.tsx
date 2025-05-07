@@ -14,44 +14,74 @@ const components = {
     props: JSX.IntrinsicAttributes &
       ClassAttributes<HTMLHeadingElement> &
       HTMLAttributes<HTMLHeadingElement>
-  ) => <h1 className="text-3xl font-bold text-text my-6" {...props} />,
+  ) => (
+    <h1
+      className="text-3xl font-bold text-green my-6 leading-snug tracking-tight"
+      {...props}
+    />
+  ),
   h2: (
     props: JSX.IntrinsicAttributes &
       ClassAttributes<HTMLHeadingElement> &
       HTMLAttributes<HTMLHeadingElement>
-  ) => <h2 className="text-2xl font-semibold text-text my-5" {...props} />,
+  ) => (
+    <h2
+      className="text-2xl font-semibold text-purple my-6 leading-snug tracking-tight"
+      {...props}
+    />
+  ),
   h3: (
     props: JSX.IntrinsicAttributes &
       ClassAttributes<HTMLHeadingElement> &
       HTMLAttributes<HTMLHeadingElement>
-  ) => <h3 className="text-xl font-medium text-text my-4" {...props} />,
+  ) => (
+    <h3
+      className="text-xl font-medium text-text my-5 leading-snug"
+      {...props}
+    />
+  ),
   p: (
     props: JSX.IntrinsicAttributes &
       ClassAttributes<HTMLParagraphElement> &
       HTMLAttributes<HTMLParagraphElement>
-  ) => <p className="text-base text-text leading-relaxed my-4" {...props} />,
+  ) => (
+    <p
+      className="text-base text-text leading-loose my-4 max-w-3xl"
+      {...props}
+    />
+  ),
   ul: (
     props: JSX.IntrinsicAttributes &
       ClassAttributes<HTMLUListElement> &
       HTMLAttributes<HTMLUListElement>
-  ) => <ul className="list-disc ml-6 my-4 text-text" {...props} />,
+  ) => (
+    <ul
+      className="list-disc ml-6 my-4 space-y-2 text-text leading-relaxed"
+      {...props}
+    />
+  ),
   ol: (
     props: JSX.IntrinsicAttributes &
       ClassAttributes<HTMLOListElement> &
       OlHTMLAttributes<HTMLOListElement>
-  ) => <ol className="list-decimal ml-6 my-4 text-text" {...props} />,
+  ) => (
+    <ol
+      className="list-decimal ml-6 my-4 space-y-2 text-text leading-relaxed"
+      {...props}
+    />
+  ),
   li: (
     props: JSX.IntrinsicAttributes &
       ClassAttributes<HTMLLIElement> &
       LiHTMLAttributes<HTMLLIElement>
-  ) => <li className="mb-1 text-text" {...props} />,
+  ) => <li className="text-text leading-relaxed" {...props} />,
   blockquote: (
     props: JSX.IntrinsicAttributes &
       ClassAttributes<HTMLQuoteElement> &
       BlockquoteHTMLAttributes<HTMLQuoteElement>
   ) => (
     <blockquote
-      className="border-l-4 border-border pl-4 italic text-textSecondary my-6"
+      className="border-l-4 border-purple pl-4 italic text-textSecondary my-6 bg-surface/40 py-2 px-3 rounded"
       {...props}
     />
   ),
@@ -61,7 +91,7 @@ const components = {
       HTMLAttributes<HTMLElement>
   ) => (
     <code
-      className="bg-surface text-green px-1 py-0.5 rounded text-sm"
+      className="bg-surface text-green px-1 py-0.5 rounded text-sm font-mono"
       {...props}
     />
   ),
@@ -71,11 +101,11 @@ const components = {
       HTMLAttributes<HTMLPreElement>
   ) => (
     <pre
-      className="bg-surface text-text p-4 rounded-lg overflow-x-auto border border-border my-6"
+      className="bg-surface border border-border text-text p-4 rounded-lg overflow-x-auto my-6 text-sm leading-relaxed"
       {...props}
     />
   ),
-  hr: () => <hr className="my-8 border-border" />,
+  hr: () => <hr className="my-10 border-border" />,
   a: (
     props: JSX.IntrinsicAttributes &
       ClassAttributes<HTMLAnchorElement> &
@@ -88,6 +118,7 @@ const components = {
   ),
   Image,
 };
+
 
 interface MdxProps {
   code: string

@@ -15,7 +15,7 @@ export const Mentoring: React.FC = () => (
       </p>
     </div>
 
-    <p className="text-base text-textSecondary leading-relaxed max-w-prose">
+    <p className="text-base text-textSecondary leading-loose">
       While I’m no longer active on platforms like Coding Coach or The Mentoring
       Club, I’m always open to supporting motivated learners. If you’re serious
       about growth and want guidance breaking into the industry, feel free to
