@@ -3,11 +3,14 @@ import {
   EMAIL_URL,
   GITHUB_URL,
   LINKEDIN_URL,
+  TELEGRAM_URL,
   TWITTER_URL,
 } from '@/app/constants';
 import { HiOutlineMail } from 'react-icons/hi';
 import { RiLinkedinBoxFill, RiTwitterXFill } from 'react-icons/ri';
 import { SiBuymeacoffee, SiGithub } from 'react-icons/si';
+import { FaTelegram } from 'react-icons/fa';
+
 
 export const Footer = () => {
   return (
@@ -29,9 +32,9 @@ export const Footer = () => {
 
         <div className="flex gap-4 text-xl">
           <IconLink
-            href={LINKEDIN_URL}
-            icon={<RiLinkedinBoxFill />}
-            label="LinkedIn"
+            href={TELEGRAM_URL}
+            icon={<FaTelegram />}
+            label="Telegram"
           />
           <IconLink href={EMAIL_URL} icon={<HiOutlineMail />} label="Email" />
           <IconLink
@@ -40,6 +43,11 @@ export const Footer = () => {
             label="Twitter"
           />
           <IconLink href={GITHUB_URL} icon={<SiGithub />} label="GitHub" />
+          <IconLink
+            href={LINKEDIN_URL}
+            icon={<RiLinkedinBoxFill />}
+            label="LinkedIn"
+          />
           <IconLink
             href={BUY_COFFEE_URL}
             icon={<SiBuymeacoffee />}
