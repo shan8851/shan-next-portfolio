@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     images: [
       {
-        url: 'https://shan8851.com/og.png', // change to actual path or Vercel OG endpoint
+        url: 'https://shan8851.com/og.png',
         width: 1200,
         height: 630,
         alt: 'Shan8851 – Full Stack Web3 Engineer',
@@ -39,7 +39,6 @@ export const metadata: Metadata = {
     images: ['https://shan8851.com/og.png'],
   },
 };
-
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -73,11 +72,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
 function SiteHeader() {
   return (
     <header className="py-4">
-      <nav className="flex items-center justify-end gap-5 text-sm font-medium text-textSecondary">
+      <nav className="flex items-center justify-end gap-5 text-md font-medium text-text">
         <NavLink href="/">home</NavLink>
         <NavLink href="/now">/now</NavLink>
         <NavLink href="/cv">cv</NavLink>
-        <NavLink href="/blog">posts</NavLink>
+        <NavLink href="/blog">writing</NavLink>
       </nav>
     </header>
   );
