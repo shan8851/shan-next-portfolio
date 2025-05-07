@@ -7,6 +7,9 @@ import { Space_Grotesk } from 'next/font/google';
 export const metadata = {
   title: 'Shan8851',
   description: 'Software developer, mentor and web3 enthusiast.',
+  icons: {
+    icon: '/avatar.png',
+  },
 };
 
 interface RootLayoutProps {
