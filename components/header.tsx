@@ -27,10 +27,14 @@ export const Header = () => (
       end-to-end systems for DAOs, DeFi, and decentralised infrastructure.
     </p>
     <div className="flex items-center gap-2">
-      <button className="border border-border rounded-xl hover:bg-surface py-2 px-4 flex gap-2 items-center">
+      <a
+        download
+        href="/cv.pdf"
+        className="border border-border rounded-xl hover:bg-surface py-2 px-4 flex gap-2 items-center"
+      >
         <LuDownload />
         Download CV
-      </button>
+      </a>
       <a
         href={EMAIL_URL}
         className="border border-border rounded-xl hover:bg-surface py-2 px-4 flex gap-2 items-center"
