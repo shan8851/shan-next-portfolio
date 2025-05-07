@@ -5,6 +5,7 @@ import { Mdx } from "@/components/mdx-components";
 import { Metadata } from "next";
 import Link from "next/link";
 import { BiLeftArrowAlt } from "react-icons/bi";
+import { PostHeader } from '@/components/postHeader';
 
 interface PostProps {
   params: {
@@ -46,10 +47,7 @@ export async function generateStaticParams(): Promise<PostProps['params'][]> {
 
 export default async function BlogPage({ params }: PostProps) {
   const post = await getPostFromParams(params);
-
-  if (!post) {
-    notFound();
-  }
+  if (!post) notFound();
 
   return (
     <article className="py-2 text-text text-lg">
@@ -61,11 +59,7 @@ export default async function BlogPage({ params }: PostProps) {
         go back
       </Link>
 
-      <h2 className="text-green text-2xl font-semibold mb-2">{post.title}</h2>
-
-      {post.description && (
-        <p className="text-xl mt-0 text-textSecondary">{post.description}</p>
-      )}
+      <PostHeader title={post.title} description={post.description} />
 
       <hr className="my-4 border-border" />
 
