@@ -4,13 +4,42 @@ import { Analytics } from '@/components/analytics';
 import { Footer } from '@/components/footer';
 import { Space_Grotesk } from 'next/font/google';
 
-export const metadata = {
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
   title: 'Shan8851',
-  description: 'Software developer, mentor and web3 enthusiast.',
+  description:
+    'Full Stack Web3 Engineer focused on DAO tooling, governance systems, and composable UX.',
   icons: {
     icon: '/avatar.png',
   },
+  openGraph: {
+    title: 'Shan8851',
+    description:
+      'Full Stack Web3 Engineer focused on DAO tooling, governance systems, and composable UX.',
+    url: 'https://shan8851.com',
+    siteName: 'Shan8851',
+    type: 'website',
+    locale: 'en_US',
+    images: [
+      {
+        url: 'https://shan8851.com/og.png', // change to actual path or Vercel OG endpoint
+        width: 1200,
+        height: 630,
+        alt: 'Shan8851 – Full Stack Web3 Engineer',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Shan8851',
+    description:
+      'Building DAO interfaces, shaping governance UX, and writing about the journey.',
+    creator: '@shan8851',
+    images: ['https://shan8851.com/og.png'],
+  },
 };
+
 
 interface RootLayoutProps {
   children: React.ReactNode;
